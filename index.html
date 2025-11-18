@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>How Tattooing Works</title>
+<meta charset = "UTF-8"/>
+<meta name= "description" content= "A brief explanation on how tattooing works">
+<link href= "styles.css" rel= "stylesheet" type="text/css">
+</head>
+
+</body>
+
+<div class= "pagebox">
+
+<header> <h1>How is a Tattoo Permanent?</h1> </header>
+
+<section>
+
+<article>
+<h2>How the Machine Itself Works</h2>
+<p>
+Anyone with a tattoo can describe the telltale buzzing sound the machine makes. But why does it sound like that? The buzzing is actually the needle vibrating. A tattoo machine will bounce a tattoo needle of the artist's choice up and down at high speeds to quickly inject ink into a person's skin.  </p>
+
+<h3>Listen here</h3>
+<audio controls>
+<source src= "audio/sound1.mp3" type="audio/mpeg">
+Your browser does not support the audio element
+</audio>
+
+</article>
+
+<hr style= "color:#50141e;"/>
+
+<article>
+<h2>Why Does the Color Peel Off?</h2>
+<img src= images/tattoopic1.jpg style="width: 25%; float: right; margin-right: 5px; margin-bottom: 5px;">
+<p>
+When tattooing, ink is injected into the dermis layer of the skin. This layer is found below your epidermis, or the outermost layer. To get to the dermis, artists must pierce through your epidermis. Doing so causes trauma similar to getting a cut or scratch. Your body scabs over and renews the damaged skin, leaving only the stained dermis layer. This is also why tattoos fade after this peeling phase.</p>
+</article>
+</section>
+<hr style= "color:#50141e;"/>
+
+<section>
+<h2>Informational Video</h2>
+<div class="video_container">
+<iframe src="https://www.youtube.com/embed/kxLoycj4pJY?si=_15xJSJMZH60sYPc"></iframe>
+</div>
+</section>
+<hr style= "color:#50141e;"/>
+
+<section id ="slideshow">
+<h2>Picture Slideshow</h2>
+<div class= "slideshow-contatiner">
+
+<div class= "mySlides fade">
+<div class="numbertext">1 /2 </div>
+<img src= images/tattoopic2.jpg stype=width100%>
+<div class= "text"></div>
+</div>
+
+<div class= "mySlides fade">
+<div class="numbertext">2 /2 </div>
+<img src= images/tattoopic3.jpg stype=width100%>
+<div class= "text"></div>
+</div>
+
+<a class= "prev" onclick="plusSlides(-1)"></a>
+<a class= "next" onclick="plusSlides (1)"></a>
+
+</div>
+<br>
+
+<div style="text-align: center">
+<span class="dot" onclick = "currentSlide(1)"></span>
+<span class="dot" onclick = "currentSlide(2)"></span>
+</div>
+</hr>
+</section>
+
+<hr style= "color:#50141e;"/>
+
+
+<footer><p>Page created by Jeremy &copy; 2025</p></footer>
+</div>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
